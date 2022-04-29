@@ -15,9 +15,11 @@
 
   <body>
     
-    <%= render 'layouts/header' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <%= render 'layouts/shared/header' %>
+    <div class="container py-4">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/shared/footer' %>
     
    <div></div> 
 
