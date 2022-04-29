@@ -1,0 +1,11 @@
+<% provide(:page, 'Users') %>
+<p style="color: green"><%= notice %></p>
+
+<img class="user-page-avatar" src="https://i.pravatar.cc/300?img=<%= @user.pravatar_num %>">
+<%= render @user %>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user), class: "btn btn-primary btn-lg" %>
+  <%= button_to "Destroy this user", @user, method: :delete, class: "btn btn-danger btn-lg" %>
+  <%= link_to "Back to users", users_path %>
+</div>

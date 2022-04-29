@@ -1,6 +1,8 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
+$black: rgba(0, 0, 0, 0.9);
+
 h1 {
 	padding: 1rem 0 3rem;
 	font-weight: 700 !important;
@@ -12,8 +14,40 @@ p {
 	font-size: calc(1.275rem + 0.3vw) !important;
 }
 
+a,
+.navbar-light .navbar-nav .nav-link {
+	color: $black;
+	&.active {
+		font-weight: bold;
+	}
+}
+
 .static-page {
 	button {
 		margin: 1rem 0;
+	}
+}
+
+form {
+	div {
+		margin: 1rem 0;
+		&.form-check {
+			margin: 1.75rem 0;
+		}
+	}
+}
+
+.user {
+	margin: 0 0 2rem;
+	overflow: hidden;
+}
+
+.user-page-avatar {
+	margin: 0 1rem 0 0;
+	float: left;
+	// width: 200px;
+	@include media-breakpoint-down(md) {
+		margin: 0 0 1rem;	
+		float: none;
 	}
 }

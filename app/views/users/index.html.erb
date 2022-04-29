@@ -1,0 +1,18 @@
+<% provide(:page, 'Users') %>
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <div class="user">
+      <img class="user-page-avatar" src="https://i.pravatar.cc/100?img=<%= user.pravatar_num %>">
+      <h2><%= user.name %></h2>
+      <p>
+        <%= link_to "Show this user", user, class: "btn btn-primary btn-lg" %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Create a new user", new_user_path, class: "btn btn-primary btn-lg" %>
